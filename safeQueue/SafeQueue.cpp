@@ -10,7 +10,11 @@ SafeQueue::SafeQueue(int capacity) {
     pthread_mutex_init(&m_mutex, NULL);
 }
 
-SafeQueue::~SafeQueue() {}
+SafeQueue::~SafeQueue() {
+    pthread_mutex_destroy(m_mutex);
+    sem_destroy(m_semaphoreEmpty);
+    sem_destroy(m_semaphoreFull);
+}
 
 void SafeQueue::push(void *args) {
 
