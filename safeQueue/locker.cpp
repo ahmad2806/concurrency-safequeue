@@ -18,12 +18,7 @@ Locker::~Locker() {
 //void Locker::get() {
 //    std::cout << "in" << std::endl;
 //}
-//void *do_the_fucking_job(void* args){
-//
-//    Locker x(m);
-//    x.get();
-//    return 0;
-//}
+
 //int main() {
 //
 //    pthread_t t0;
